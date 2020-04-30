@@ -1,0 +1,5 @@
+<h1> Confessions </h1>
+<% @posts.each do |post| %>
+    <p><strong><%=post.title %></strong></p>
+    <p><%= post.comment %></p><br/>
+<% end %>
