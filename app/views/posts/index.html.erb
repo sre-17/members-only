@@ -1,5 +1,8 @@
 <h1> Confessions </h1>
 <% @posts.each do |post| %>
+    <% if user_signed_in? %>
+        <p><i><%= post.user.username %></i> wrote: </p>
+    <% end %>
     <p><strong><%=post.title %></strong></p>
-    <p><%= post.comment %></p><br/>
+    <p><%= post.body %></p><hr/><br/>
 <% end %>
